@@ -53,3 +53,6 @@ jobs:
         CLUSTER_NAME=$(az aks list --resource-group ${{ secrets.CLUSTER_RESOURCE_GROUP }} --query "[].name" -o tsv)
         ACR_NAME=$(az acr list --resource-group ${{ secrets.CLUSTER_RESOURCE_GROUP }} --query "[].name" -o tsv)
         az aks update -n $CLUSTER_NAME -g ${{ secrets.CLUSTER_RESOURCE_GROUP }} --attach-acr $ACR_NAME  
+
+
+#Cambios
