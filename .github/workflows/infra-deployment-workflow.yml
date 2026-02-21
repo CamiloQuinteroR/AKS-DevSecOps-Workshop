@@ -49,6 +49,7 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
           template: tools/deploy/module0/aks.bicep
+          deploymentName: aks-${{ github.run_id }}
           failOnStdErr: false
 
       # Attach ACR to AKS
